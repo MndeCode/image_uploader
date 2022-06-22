@@ -1,6 +1,13 @@
 .complete {
+    background-color: #fff;
+    max-width: 402px;
     width: 100%;
-    height: 100%;
+    border-radius: 12px;
+    margin: 0 auto;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     .complete__header {
         display: flex;
         flex-direction: column;
@@ -23,20 +30,28 @@
         height: 200px;
         background-color: #1f2937;
         margin-top: 20px;
+        position: relative;;
+        display: block;
+        object-fit: cover;
     }
 
     .complete__link {
         background-color: #f3f4f6;
-        display: flex;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 100px;
         margin-top: 20px;
         border-radius: 8px;
+        position: relative;
+        border: 1px solid #d1d5db;
         p {
             font-size: 13px;
             color: #6b7280;
-            padding: 10px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            display: block;
+            align-self: center;
         }
         button {
             color: white;
@@ -45,21 +60,45 @@
             background-color: #2563eb;
             display: flex;
             align-items: center;
-            gap: 5px;
-            font-family: 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            justify-content: center;
+            min-height: 35px;
+            height: auto;
+            gap: 3px;
             flex-shrink: 0;
-            flex-grow: 0;
             padding: 5px;
-            border-radius: 0 8px 8px 0;
+            border-radius: 8px;
             transition: all 150ms linear;
             cursor: pointer;
             svg {
                 width: 24px;
                 height: 24px;
             }
+            span {
+                margin: 0;
+            }
             &:hover {
                 background-color: #1e40af;
             }
         }
+    }
+}
+
+.restart {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    bottom: 50px;
+    gap: 3px;
+    cursor: pointer;
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        color: #64748b
     }
 }

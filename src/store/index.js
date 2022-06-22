@@ -4,14 +4,15 @@ import { devtools, persist } from 'zustand/middleware';
 const fileStore = (set) => ({
     link: '',
     file: {},
-    addFiles: (newFile) => {           
-        set((state) => ({
-            file: {newFile, ...state.file},
-        }))
+    error: false,
+    progress: 0,
+
+    addFile: (newFile) => {           
+        set((state) => (state.file = newFile))
     },
-    addLinks: (link) => {
-        set((state) => ( state.link = link ))
-    }
+    setLink: (link) => (set({ link })),
+    addError: (error) => ( set({error}) ),
+    setProgress: (progress) => ( set({progress}) )
 });
 
 const useFileStore = create(

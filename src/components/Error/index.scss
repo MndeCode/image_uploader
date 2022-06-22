@@ -1,0 +1,64 @@
+.error__container {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    border: 1px solid rebeccapurple;
+    top: 0;
+    left: 0;
+    .error__bg {
+        position: fixed;
+        background-color: rgba(#0f172a, 0.85);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+    .error__modal {
+        background-color: #fff;
+        padding: 15px;
+        max-width: 320px;
+        width: 100%;
+        border-radius: 5px;
+        z-index: 20;
+        .error__header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            svg {
+                width: 38px;
+                height: 38px;
+            } 
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }           
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+        button {
+            display: block;
+            background: #0f172a;
+            border: none;
+            color: #f1f5f9;
+            padding: 3px 6px;
+            border-radius: 2px;
+            font-family: 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+              sans-serif;
+            width: 70px;
+            margin: 15px auto 0 auto;
+            font-size: 16px;
+            outline: none;
+        }
+    }
+}
